@@ -28,7 +28,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --color 000000 --nofork 
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -191,7 +191,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+shift+x exec i3lock
+bindsym $mod+shift+x exec i3lock --color 000000
 
 # Apps i want to open on launch
 exec --no-startup-id brave-browser
@@ -211,8 +211,6 @@ exec_always --no-startup-id feh --bg-scale /home/christian/pictures/wallpaper.pn
 # exec_always --no-startup-id xrandr --output HDMI-0 --mode 1920x1080 --pos 3440x360 --rotate normal --output DP-0 --primary --mode 3440x1440 --rate 144 --pos 0x0 --rotate normal --output DP-1 --off --output DP-2 --off --output DP-3 --off --output DP-4 --off --output DP-5 --off
 # This line was merged into a bash setup instead (multiple moniters made this annoying)
 exec_always --no-startup-id ~/.local/bin/screenlayout.sh
-
-# merge the XResources into the urxvt emulator
 
 # reload urxvt script for customization
 exec_always --no-startup-id xrdb -merge ~/.Xresources
