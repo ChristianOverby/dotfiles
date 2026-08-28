@@ -1,0 +1,27 @@
+Vscodium goodies
+People keep sayin vscodium can't use vscode extension market...err...yes, it can:
+
+Change Extension Marketplace for VSCodium in ~/ressources/app/product.json (after every update!)
+
+change
+
+"extensionsGallery": {
+    "serviceUrl": "https://open-vsx.org/vscode/gallery",
+    "itemUrl": "https://open-vsx.org/vscode/item"
+  },
+with whatever is in resources\app\product.json in vscode:
+
+"extensionsGallery": {
+	"nlsBaseUrl": "https://www.vscode-unpkg.net/_lp/",
+	"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
+	"itemUrl": "https://marketplace.visualstudio.com/items",
+	"publisherUrl": "https://marketplace.visualstudio.com/publishers",
+	"resourceUrlTemplate": "https://{publisher}.vscode-unpkg.net/{publisher}/{name}/{version}/{path}",
+	"extensionUrlTemplate": "https://www.vscode-unpkg.net/_gallery/{publisher}/{name}/latest",
+	"controlUrl": "https://main.vscode-cdn.net/extensions/marketplace.json",
+	"mcpUrl": "https://main.vscode-cdn.net/mcp/servers.json",
+	"accessSKUs": ["copilot_enterprise_seat", "copilot_enterprise_seat_quota", "copilot_enterprise_seat_multi_quota", "copilot_enterprise_seat_assignment", "copilot_enterprise_seat_assignment_quota", "copilot_enterprise_seat_assignment_multi_quota", "copilot_enterprise_trial_seat", "copilot_enterprise_trial_seat_quota", "copilot_for_business_seat", "copilot_for_business_seat_quota", "copilot_for_business_seat_multi_quota", "copilot_for_business_seat_assignment", "copilot_for_business_seat_assignment_quota", "copilot_for_business_seat_assignment_multi_quota", "copilot_for_business_trial_seat", "copilot_for_business_trial_seat_quota"]
+},
+Never had problems with extensions. I get the same extensions in vscodium as I have in vscode.
+
+For legal reasons the vscodium devs can't and won't mention this method. It's verboten. But what they gonna do? Sue me? Let them.
