@@ -200,6 +200,15 @@ bindsym $mod+r mode "resize"
 
 bindsym $mod+shift+x exec i3lock --color 000000
 
+# Save full screen to ~/Pictures
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date +%F-%T).png"
+
+# Save active window to ~/Pictures
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date +%F-%T).png"
+
+# Select area and copy to clipboard
+bindsym Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png   
+
 # Apps i want to open on launch
 exec --no-startup-id brave-browser
 exec --no-startup-id codium
